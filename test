@@ -1,0 +1,37 @@
+questions = [["What is 5 + 3?","A. 6", "B. 7", "C. 8", "D. 9","C"],
+    ["What is 10 - 4?","A. 5", "B. 6", "C. 7", "D. 8","B"],
+    ["What is 6 × 2?","A. 10", "B. 12", "C. 14", "D. 16","B"],
+    ["What is 20 ÷ 5?","A. 2", "B. 3", "C. 4", "D. 5","C"],
+    ["What is 7 + 6?","A. 11", "B. 12", "C. 13", "D. 14","C"],
+    ["What is 2 + 3?","A. 5", "B. 7", "C. 8", "D. 9","A"],
+    ["What is 10 - 2?","A. 5", "B. 2", "C. 7", "D. 8","D"],
+    ["What is 6 + 2?","A. 10", "B. 12", "C. 8", "D. 16","C"],
+    ["What is 10 ÷ 5?","A. 2", "B. 3", "C. 4", "D. 5","A"],
+    ["What is 7 + 2?","A. 11", "B. 12", "C. 13", "D. 9","D"]]
+
+score = 0
+
+
+for q in questions:
+    print(q[0])
+    print (q[1])
+    print (q[2])
+    print (q[3])
+    print (q[4])
+    user_answer = input("Enter your answer (A/B/C/D): ").upper()
+
+    if user_answer == q[5]:
+        print("Correct!")
+        score += 1
+    else:
+        print("Wrong! Correct answer is:", q[5])
+
+print("Quiz completed!")
+print("You got ", score, " correct out of", len(questions))
+
+if score >= 8:
+    print("Excellent!")
+elif score >= 5:
+    print("Good!")
+else:
+    print("Try again!")
